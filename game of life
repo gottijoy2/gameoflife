@@ -67,5 +67,19 @@ int main() {
         std::cout << std::endl;
     }
 
-   
+    // update the grid for a certain number of generations
+    const int NUM_GENERATIONS = 10;
+    for (int gen = 0; gen < NUM_GENERATIONS; gen++) {
+        std::cout << "Generation " << gen << std::endl;
+        std::vector<std::vector<int>> newGrid = grid;
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLS; j++) {
+                int aliveNeighbors = countAliveNeighbors(grid, i, j);
+                if (grid[i][j] == 1) {
+                    if (aliveNeighbors < 2 || aliveNeighbors > 3) {
+                        newGrid[i][j
+d
+    std::vector<std::vector<int>> grid(ROWS, std::vector<int>(COLS));
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++)
 
